@@ -1,0 +1,25 @@
+$clean-button-color: #ae3127;
+$button-text-color: white;
+$disabled-button-color: #808080;
+
+.clean-button {
+  display: block;
+  width: 200px;
+  cursor: pointer;
+  background-color: $clean-button-color;
+  color: $button-text-color;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0 auto;
+  transition: 0.3s ease-in;
+
+  &:hover:enabled {
+    opacity: 75%;
+  }
+  &:disabled {
+    background-color: $disabled-button-color;
+    cursor: default;
+  }
+}

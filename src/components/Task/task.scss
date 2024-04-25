@@ -1,0 +1,55 @@
+$task-background-color: #fff;
+$add-open-button-color: #007bff;
+$delete-button-color: #ae3127;
+$completed-background-color: #7eb293;
+$button-text-color: white;
+$disabled-button-color: #808080;
+
+.task {
+  background-color: $task-background-color;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  h3 {
+    margin-top: 0;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: $add-open-button-color;
+    color: $button-text-color;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    transition: 0.3s ease-in;
+
+    &:nth-child(3) {
+      margin-right: 10px;
+    }
+
+    &:hover:enabled {
+      opacity: 75%;
+    }
+    &:disabled {
+      background-color: $disabled-button-color;
+      cursor: default;
+    }
+  }
+
+  .delete-button {
+    background-color: $delete-button-color;
+  }
+}
+
+.completed {
+  background-color: $completed-background-color;
+}

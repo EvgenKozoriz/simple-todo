@@ -1,0 +1,86 @@
+$modal-background-color: white;
+$add-open-button-color: #007bff;
+$close-button-color: #ae3127;
+$button-text-color: white;
+$disabled-button-color: #808080;
+.new-task-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $modal-background-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 400px;
+  width: 100%;
+
+  input,
+  textarea,
+  button {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  input {
+    width: calc(100% - 20px);
+  }
+
+  textarea {
+    width: calc(100% - 20px);
+    resize: vertical;
+    height: 200px;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: $add-open-button-color;
+    color: $button-text-color;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    transition: 0.3s ease-in;
+  }
+  .add-button {
+    &:hover:enabled {
+      opacity: 75%;
+    }
+    &:disabled {
+      background-color: $disabled-button-color;
+      cursor: default;
+    }
+  }
+
+  .close-button {
+    background-color: $close-button-color;
+
+    &:hover {
+      opacity: 75%;
+    }
+  }
+}
+
+.open-button {
+  display: block;
+  width: 200px;
+  cursor: pointer;
+  background-color: $add-open-button-color;
+  color: $button-text-color;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0 auto;
+  transition: 0.3s ease-in;
+
+  &:hover {
+    opacity: 75%;
+  }
+}
